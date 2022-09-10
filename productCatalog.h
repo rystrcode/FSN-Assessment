@@ -16,19 +16,25 @@ class catalogEntry
         double price;
 };
 
-// class that functions as container for a table of catalog entries with abilty to grow
+/*
+    class that functions as container for a table of catalog 
+    entries with abilty to grow
+*/
+
 class productCatalog
 {
     public:
-        void addEntry(catalogEntry newEntry);
+        void addEntry(catalogEntry newEntry); // stores entry into vector
         void showCatalog();
 
-        std::string getCode(int i );
+        // accessors for price and product code
+        std::string getCode(int i ); 
         double getPrice(int i);
-        int getSize();
+        
+        int getSize(); // get number of entries in catalog
 
 
-        std::vector<catalogEntry> entries;
+        std::vector<catalogEntry> entries; // container for series of entries
 };
 
 #endif
