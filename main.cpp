@@ -3,6 +3,7 @@
 #include "offers.h"
 #include "cart.h"
 #include <iostream>
+#include <cmath>
 
 /*
     Main displays the main functions of the cart and its components (catalog,devlivery rules and offers)

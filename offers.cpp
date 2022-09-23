@@ -1,4 +1,5 @@
 #include "offers.h"
+#include <cmath>
 
 /*
     applyOffers
@@ -26,7 +27,10 @@ double offers::applyOffers(double subtotal, std::vector<std::string> productsInC
         }
     }
 
-    subtotal = subtotal - ( (purchasesOfRed / 2) * (32.95 / 2) );
+    subtotal = subtotal - ( (purchasesOfRed / 2) * (32.95 / 2));
+
+    // bring up first two decimals then truncate rest, then decimals back into place
+    subtotal =  floor(subtotal / .01 ) / 100; 
 
     return subtotal;
 }
